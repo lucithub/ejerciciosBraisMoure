@@ -15,7 +15,6 @@
 Cada carpeta corresponde a un **lenguaje diferente**.  
 Actualmente hay soluciones en:
 
-- **Arduino**
 - **C#**
 - **C++**
 - **Java**
