@@ -2,15 +2,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/*
+ * Escribe una función que reciba dos palabras (String) y retorne
+ * verdadero o falso (Bool) según sean o no anagramas.
+ * - Un Anagrama consiste en formar una palabra reordenando TODAS
+ *   las letras de otra palabra inicial.
+ * - NO hace falta comprobar que ambas palabras existan.
+ * - Dos palabras exactamente iguales no son anagrama.
+ */
 public class Anagrama {
-    /*
-     * Escribe una función que reciba dos palabras (String) y retorne
-     * verdadero o falso (Bool) según sean o no anagramas.
-     * - Un Anagrama consiste en formar una palabra reordenando TODAS
-     *   las letras de otra palabra inicial.
-     * - NO hace falta comprobar que ambas palabras existan.
-     * - Dos palabras exactamente iguales no son anagrama.
-     */
     public Boolean isAnagram(String p1, String p2){
         p1 = p1.toLowerCase().replaceAll(" ", "");
         p2 = p2.toLowerCase().replaceAll(" ", "");
