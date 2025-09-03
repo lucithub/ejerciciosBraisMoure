@@ -20,7 +20,6 @@ Actualmente hay soluciones en:
 - **Java**
 - **JavaScript**
 - **Python**
-- **SQL**
 - **TypeScript**
 
 ```bash
