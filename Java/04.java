@@ -13,9 +13,7 @@ public class Main {
     public static Boolean esPrimo(Integer numero){
         if (numero < 2) return false;
         for (int i = 2; i <= Math.sqrt(numero); i++) {
-            if (numero % i == 0) {
-                return false;
-            }
+            if (numero % i == 0) return false;
         }
         return true;
     }
