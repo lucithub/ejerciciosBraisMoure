@@ -16,7 +16,6 @@ Cada carpeta corresponde a un **lenguaje diferente**.
 Actualmente hay soluciones en:
 
 - **C#**
-- **C++**
 - **Java**
 - **JavaScript**
 - **Python**
@@ -27,9 +26,9 @@ ejerciciosBraisMoure/
 │── JavaScript/
 │    ├── 01.js
 │    └── 02.js
-│── C++/
-│    ├── 01.cpp
-│    └── 02.cpp
+│── C#/
+│    ├── 01.cs
+│    └── 02.cs
 │── Java/
 │    ├── 01.java
 │    └── 02.java
