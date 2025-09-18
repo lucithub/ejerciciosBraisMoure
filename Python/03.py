@@ -7,11 +7,11 @@
 #
 print("El numero 1 de Fibonacci es: 0")
 print("El numero 2 de Fibonacci es: 1")
-int suma = 0
-int n1 = 0
-int n2 = 1
+suma = 0
+n1 = 0
+n2 = 1
 for i in range(3, 50):
     suma = n1 + n2
-    print("El numero " + i +" de Fibonacci es: "+ suma)
+    print(f"El numero {i} de Fibonacci es: {suma}")
     n1 = n2 
     n2 = suma
