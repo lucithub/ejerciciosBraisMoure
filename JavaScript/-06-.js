@@ -7,14 +7,21 @@
  *   imagen de 1920*1080px.
  */
 
-// VER PORBLEMA CON MATH.JS
+import { Image } from "canvas";
 
-function aspectRatio(url){
-    let urlN = new URL(url)
-    let imagen = new Image(url.width, url.height)
-    //const mcd = (imagen.width, imagen.height)
-    let aspect = (imagen.width / imagen.height) * mcd + ':' + mcd
-    return aspect
+function maximoComunDivisor(a, b) {
+    return b === 0 ? a : maximoComunDivisor(b, a % b);
 }
 
-console.log(aspectRatio("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Xu8ypjo1kDVjZchK8OKSMIs_gMD7qgUKkA&s"))
+function aspectRatio(url){
+    const img = new Image();
+    img.src = url;
+    img.onload = function() {
+        const divisor = maximoComunDivisor(Math.round(img.width), Math.round(img.height))
+        const ratioW = img.width / divisor;
+        const ratioH = img.height / divisor;
+        console.log(`Aspect ratio simplificado: ${ratioW}:${ratioH}`);
+    }
+}
+
+aspectRatio("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
