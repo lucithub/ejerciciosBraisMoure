@@ -1,22 +1,25 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Crea un programa se encargue de transformar un número
  * decimal a binario sin utilizar funciones propias del lenguaje que lo hagan directamente.
  **/
 public class DecimalConverter {
-    public Integer DtoB(Integer numero){
-        Integer cociente = 0, residuo = 0;
+    public String DtoB(int numero){
+        int residuo = 0;
         List<Integer> residuos = new ArrayList<>();
-        do {
-            cociente = Math.round(numero / 2);
-            residuo = Math.round(numero % 2);
+        while (numero != 0){
+            residuo = numero % 2;
             residuos.add(residuo);
-
-        } while (cociente != 0);
-        residuos = residuos.reversed();
+            numero = numero / 2;
+        }
+        Collections.reverse(residuos);
         StringBuilder sb = new StringBuilder();
         for (Integer n : residuos){
             sb.append(n);
         }
-        return Integer.parseInt(sb.toString());
+        return sb.toString();
     }
 }
