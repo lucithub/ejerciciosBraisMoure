@@ -5,6 +5,14 @@ using static System.Net.Mime.MediaTypeNames;
 using SixLabors.ImageSharp;
 using Image = SixLabors.ImageSharp.Image;
 
+/*
+ * Crea un programa que se encargue de calcular el aspect ratio de una
+ * imagen a partir de una url.
+ * - Url de ejemplo:
+ *   https://raw.githubusercontent.com/mouredevmouredev/master/mouredev_github_profile.png
+ * - Por ratio hacemos referencia por ejemplo a los "16:9" de una
+ *   imagen de 1920*1080px.
+ */
 public class ImageAspectCalculator
 {
     public static string GetAspectRatioFromUrl(string imageUrl)
