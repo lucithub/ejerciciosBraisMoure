@@ -19,13 +19,11 @@ namespace _15
             string numeroString = numero.ToString();
             int longitud = numeroString.Length;
             int suma = 0;
-
             foreach (char c in numeroString)
             {
                 int digito = (int)char.GetNumericValue(c);
                 suma += (int)Math.Pow(digito, longitud);
             }
-
             return suma == numero;
         }
     }
