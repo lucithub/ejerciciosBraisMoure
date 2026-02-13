@@ -47,5 +47,38 @@ namespace FigurasGeometricasLIV
             }
             return triangle;
         }
+        public static string[,] DrawRhombus(int size)
+        {
+            // Validamos que sea impar para que tenga un centro exacto
+            if (size % 2 == 0) throw new Exception("El tamaño del rombo debe ser un número IMPAR");
+        
+            string[,] rhombus = new string[size, size];
+            int center = size / 2;
+        
+            for (int i = 0; i < size; i++)
+            {
+                // Calculamos qué tan lejos estamos del centro verticalmente
+                // Si size es 5 (center 2):
+                // i=0 -> dist=2, i=1 -> dist=1, i=2 -> dist=0, i=3 -> dist=1, i=4 -> dist=2
+                int distanceFromCenter = Math.Abs(center - i);
+        
+                // El desplazamiento (offset) define qué tan abiertos están los asteriscos
+                int offset = center - distanceFromCenter;
+        
+                for (int j = 0; j < size; j++)
+                {
+                    // Colocamos asterisco en los bordes izquierdo y derecho calculados
+                    if (j == center - offset || j == center + offset)
+                    {
+                        rhombus[i, j] = "*";
+                    }
+                    else
+                    {
+                        rhombus[i, j] = " ";
+                    }
+                }
+            }
+            return rhombus;
+        }
     }
 }
