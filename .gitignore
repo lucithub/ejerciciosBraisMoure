@@ -1,0 +1,10 @@
+# Ignorar carpetas de compilación
+bin/
+obj/
+.vs/
+*.user
+*.dll
+*.exe
+*.pdb
+.vscode/
+.idea/
